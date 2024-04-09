@@ -1,0 +1,109 @@
+@mixin font-1 {
+    font-weight: 600;
+    line-height: auto; 
+    font-size: 64px;
+}
+@mixin font-2 {
+    font-weight: 600;
+    line-height: 58px; 
+    font-size: 48px;
+}
+@mixin font-3 {
+    font-weight: 600;
+    line-height: 58px; 
+    font-size: 40px;
+}
+@mixin font-4 {
+    font-weight: 500;
+    line-height: 44px; 
+    font-size: 36px;
+}
+@mixin font-5 {
+    font-weight: 600;
+    line-height: auto; 
+    font-size: 32px;
+}
+@mixin font-6 {
+    font-weight: 600;
+    line-height: auto; 
+    font-size: 28px;
+}
+@mixin font-7 {
+    font-weight: 400;
+    line-height: auto; 
+    font-size: 20px;
+}
+@mixin font-8 {
+    font-weight: 500;
+    line-height: auto; 
+    font-size: 20px;
+}
+@mixin font-9 {
+    font-weight: 400;
+    line-height: auto; 
+    font-size: 18px;
+}
+@mixin font-10 {
+    font-weight: 600;
+    line-height: auto; 
+    font-size: 64px;
+}
+@mixin font-11 {
+    font-weight: 600;
+    line-height: 28px; 
+    font-size: 16px;
+}
+@mixin font-12 {
+    font-weight: 400;
+    line-height: auto; 
+    font-size: 14px;
+}
+
+@mixin font-body-1 {
+    font-weight: 300;
+    line-height: 28px; 
+    font-size: 16px;
+}
+@mixin font-body-2 {
+    font-weight: 400;
+    line-height: 28px; 
+    font-size: 14px;
+}
+@mixin font-body-3 {
+    font-weight: 400;
+    line-height: 28px; 
+    font-size: 16px;
+}
+@mixin font-body-4 {
+    font-weight: 400;
+    line-height: 20px; 
+    font-size: 12px;
+}
+
+@mixin font-caption-1 {
+    font-weight: 500;
+    line-height: auto; 
+    font-size: 16px;
+}
+@mixin font-caption-2 {
+    font-weight: 500;
+    line-height: 20px; 
+    font-size: 14px;
+}
+@mixin font-caption-3 {
+    font-weight: 500;
+    line-height: 14px; 
+    font-size: 10px;
+}
+
+@mixin font-button-1 {
+    font-weight: 700;
+    line-height: 14px; 
+    font-size: 14px;
+}
+
+@mixin font-button-2 {
+    font-weight: 300;
+    line-height: 28px; 
+    font-size: 16px;
+}
