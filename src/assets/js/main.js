@@ -1,1 +1,6 @@
-console.log('here')
+import { burger } from "./burger.js"
+
+
+window.addEventListener('DOMContentLoaded', () => {
+    burger();
+})

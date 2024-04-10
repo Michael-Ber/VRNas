@@ -8,6 +8,23 @@ html {
     box-sizing: inherit;
 }
 
+.page__body {
+    font-family: "Chakra Petch", sans-serif;
+    margin: 0;
+    min-width: 430px;
+    min-height: 100%;
+    font-size: 16px;
+    background: $greyscale-black-100;
+    color: $greyscale-white;
+}
+
+.site-container {
+    background: $greyscale-black-100;
+    max-width: 1440px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
 img {
     display: block;
     height: auto;
@@ -24,6 +41,43 @@ a {
     padding: 0;
     background-color: transparent;
     cursor: pointer;
+}
+
+.btn {
+
+    &_primary {
+        background: $gradient;
+        color: $greyscale-white;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 100%;
+        text-align: center;
+        transition: .3s box-shadow ease, .3s background ease, .3s color ease;
+        &:hover {
+            box-shadow: 0 0 0 5px $greyscale-black-100, 0 0 0 7px $main-colors-blue;
+            background: $gradient-light;
+            color: $greyscale-black-100;
+        }
+    }
+    &_secondary {
+        border: 10px solid;
+        border-width: 1px;
+        border-image-slice: 1;
+        border-image-source: $gradient;
+
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 175%;
+        color: $greyscale-white;
+
+        transition: .2s box-shadow ease-in-out, .3s color ease-in-out;
+
+        &:hover {
+            box-shadow: -4px 0px 15px 0px $main-colors-blue, 4px 0px 15px 0px $main-colors-purple;
+            color: $main-colors-blue;
+        }
+    }
 }
 
 .list-reset {
@@ -57,6 +111,21 @@ a {
     padding-top: $section-offset;
 }
 
+.page-title {
+    margin: 0;
+    font-weight: 600;
+    font-size: 64px;
+    @include desktop-md {
+        font-size: 56px;
+    }
+    @include tablet {
+        font-size: 44px;
+    } 
+    @include mobile {
+        font-size: 48px;
+    }
+}
+
 .section-title {
     margin: 0;
     font-weight: 700;
@@ -66,7 +135,7 @@ a {
 .grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    gap: $grid-gap;
+    column-gap: $grid-gap;
     @include tablet-sm {
         column-gap: $grid-gap;
         grid-template-columns: repeat(4, 1fr);

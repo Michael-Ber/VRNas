@@ -275,6 +275,7 @@ gulp.task("watch", () => {
   gulp.watch("./src/assets/js/**/*.js", gulp.parallel("scripts"));
   gulp.watch("./src/partials/**/*.html", gulp.parallel("html-include"));
   gulp.watch("./src/*.html", gulp.parallel("html-include"));
+  gulp.watch("./src/resources", gulp.parallel("resources"));
   gulp.watch("./src/assets/svg/**/*.*", gulp.parallel("svgSprites"));
   gulp.watch("./src/assets/img/**/**.{jpg,jpeg,png,svg}", gulp.parallel("images"));
   gulp.watch("./src/assets/img/**/**.{jpg,jpeg,png}", gulp.parallel("webp"));

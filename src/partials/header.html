@@ -1,3 +1,63 @@
 <header class="header">
-    
+    <div class="container header__container">
+        <a href="index.html" class="logo header__logo" aria-label="Logo">
+            <img loading="lazy" src="../assets/img/logo.svg" class="logo__icon" width="101" height="30" alt="Company Logo">
+        </a>
+        <nav class="nav" title="Navigation links">
+          <ul class="list-reset nav__list">
+            <li class="nav__item"><a href="#" class="nav__link nav-link">Home</a></li>
+            <li class="nav__item"><a href="#" class="nav__link nav-link">About us</a></li>
+            <li class="nav__item"><a href="#" class="nav__link nav-link">Service</a></li>
+            <li class="nav__item nav__item_more">
+                <ul class="list-reset nav__sublist">
+                    Page
+                    <li class="nav__subitem"><a href="#" class="nav__link nav-link">Detail Service</a></li>
+                    <li class="nav__subitem"><a href="#" class="nav__link nav-link">Pricing Plan</a></li>
+                    <li class="nav__subitem"><a href="#" class="nav__link nav-link">FAQ</a></li>
+                    <li class="nav__subitem"><a href="#" class="nav__link nav-link">Terms & Conditions</a></li>
+                    <li class="nav__subitem"><a href="#" class="nav__link nav-link">Privacy Policy</a></li>
+                </ul>
+                <svg class="nav__item-svg">
+                  <use xlink:href="assets/svg/sprite.svg#arrow"></use>
+                </svg>
+            </li>
+            <li class="nav__item nav__item_more">
+                <ul class="list-reset nav__sublist">
+                    Blog
+                    <li class="nav__subitem"><a href="#" class="nav__link nav-link">Detail Blog</a></li>
+                    <li class="nav__subitem"><a href="#" class="nav__link nav-link">Our Team</a></li>
+                </ul>
+                <svg class="nav__item-svg">
+                    <use xlink:href="assets/svg/sprite.svg#arrow"></use>
+                </svg>
+            </li>
+          </ul>
+        </nav>
+        <div class="burger" title="Burger Wrapper">
+           <button class="burger__btn" aria-label="Открыть меню" aria-expanded="false">
+             <span class="burger__line"></span>
+             <span class="burger__line"></span>
+             <span class="burger__line"></span>
+           </button>
+           <div class="burger__menu" aria-hidden="true">
+             <button class="burger__close">&#10006;</button>
+             <nav class="burger__nav" title="Burger Links">
+               <ul class="list-reset burger__list">
+                 <li class="burger__item"><a href="#" class="burger__link nav-link">Home</a></li>
+                 <li class="burger__item"><a href="#" class="burger__link nav-link">About us</a></li>
+                 <li class="burger__item"><a href="#" class="burger__link nav-link">Service</a></li>
+                 <li class="burger__item"><a href="#" class="burger__link nav-link">Detail Service</a></li>
+                 <li class="burger__item"><a href="#" class="burger__link nav-link">Pricing Plan</a></li>
+                 <li class="burger__item"><a href="#" class="burger__link nav-link">FAQ</a></li>
+                 <li class="burger__item"><a href="#" class="burger__link nav-link">Terms & Conditions</a></li>
+                 <li class="burger__item"><a href="#" class="burger__link nav-link">Privacy Policy</a></li>
+                 <li class="burger__item"><a href="#" class="burger__link nav-link">Detail Blog</a></li>
+                 <li class="burger__item"><a href="#" class="burger__link nav-link">Our Team</a></li>
+                 <li class="burger__item"><a href="#" class="burger__link nav-link burger__link_contact">Contact us</a></li>
+               </ul>
+             </nav>
+            </div>
+         </div>
+        <button class="btn-reset btn btn_secondary header__contact-btn">Contact us</button>
+    </div>
 </header>

@@ -4,19 +4,25 @@ $section-offset: 150px;
 
 $grid-gap: 32px;
 
+$maxWidth: 1920;
+$minWidth: 430;
+
 // COLORS
 
-$main-color-purple: #CA6AEB;
-$main-color-blue: #19B5F1;
-$alerts-color-success: #00C566;
-$alerts-color-error: #FF4747;
-$alerts-color-warning: #FACC15;
-$black: #18181B;
-$black-50: #252532;
-$gray-1: #B0B0B2;
-$gray-2: #D1D1D1;
-$white: #FFFFFF;
+$main-colors-purple: #ca6aeb;
+$main-colors-blue: #19b5f1;
+$greyscale-black-100: #18181b;
+$greyscale-black-80: #252532;
+$greyscale-grey-1: #b0b0b2;
+$greyscale-grey-2: #d1d1d1;
+$greyscale-white: #fff;
+$alerts-success: #00c566;
+$alerts-error: #ff4747;
+$alerts-warning: #facc15;
 
 $gradient: linear-gradient(90deg, #0cbaf1 0%, #e95ce9 100%);
+$gradient-light: linear-gradient(90deg, lighten(#0cbaf1, 10%) 0%, lighten(#e95ce9, 10%) 100%);
+
+$burger-line-color: #fff;
 
 
