@@ -29,7 +29,9 @@
 		&__video-player {
             width: 100%;
             height: auto;
+            min-height: 254px;
             border-radius: 12px;
+            object-fit: cover;
             cursor: pointer;
 		}
 
