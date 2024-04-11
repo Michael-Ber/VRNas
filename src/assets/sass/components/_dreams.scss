@@ -1,0 +1,89 @@
+.dreams {
+
+		&__title {
+            text-align: center;
+            padding-bottom: 12px;
+		}
+
+		&__subtitle {
+            text-align: center;
+            padding-bottom: 48px;
+		}
+
+		&__video-wrapper {
+            position: relative;
+            margin-bottom: 48px;
+            &:hover {
+                .dreams__video-play {
+                    transform: translate(-50%, -50%) scale(1.2);
+                    svg {
+                        path {
+                            fill-opacity: 0.9
+                        }
+                    }
+                }
+            }
+            
+		}
+
+		&__video-player {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            cursor: pointer;
+		}
+
+        &__video-comments {
+            position: absolute;
+            top: 52px;
+            left: 34px;
+        }
+
+		&__video-service {
+            display: inline-block;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 143%;
+            text-align: center;
+            color: $greyscale-white;
+            background-color: rgba($greyscale-white, .3);
+            border-radius: 16px;
+            padding: 2px 10px;
+            margin-bottom: 12px;
+		}
+
+		&__video-name {
+            font-weight: 500;
+            font-size: 36px;
+            line-height: 122%;
+            letter-spacing: -0.02em;
+            color: $greyscale-white;
+            @include tablet {
+                font-size: 20px;
+            }
+		}
+
+        &__video-play {
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: .3s transform ease;
+            z-index: 1;
+            cursor: pointer;
+            @include mobile {
+                svg {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
+
+        &__btn {
+            display: block;
+            width: 182px;
+            height: 50px;
+            margin: 0 auto;
+        }
+}

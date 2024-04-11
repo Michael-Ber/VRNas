@@ -1,0 +1,123 @@
+.service {
+
+
+
+		&__titles {
+            grid-column: 1 / span 4;
+            @include tablet-sm {
+                grid-column: span 4;
+                margin: 0 auto;
+                text-align: center;
+            }
+		}
+
+	
+
+		&__subtitle {
+            @include tablet-sm {
+                margin-bottom: 12px;
+            }
+		}
+
+		&__text {
+            grid-column: 6 / span 7;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 175%;
+            margin: 0;
+            padding-bottom: 46px;
+            @include tablet-sm {
+                grid-column: span 4;
+            }
+		}
+
+		&__cards {
+            grid-column: 1 / span 12;
+            padding-bottom: 135px;
+            row-gap: 32px;
+            @include tablet-sm {
+                grid-column: span 4;
+            }
+            @include tablet-sm {
+                padding-bottom: 0;
+            }
+		}
+}
+.service-card {
+    position: relative;
+    min-height: 291px;
+    padding: 144px 32px 25px 32px;
+    grid-column: span 4;
+    cursor: pointer;
+
+    &:nth-child(3n + 2) {
+        top: 57px;
+    }
+    &:nth-child(3n + 3) {
+        top: 135px;
+    }
+
+    @include tablet {
+        grid-column: span 6;
+        
+        &:nth-child(3n + 2) {
+            top: 0;
+        }
+        &:nth-child(3n + 3) {
+            top: 0;
+        }
+        &:nth-child(2n + 2) {
+            top: 57px;
+        }
+    }
+    @include tablet-sm {
+        width: 379px;
+        margin: 0 auto;
+        &:nth-child(2n + 2) {
+            top: 0;
+        }
+    }
+    @include mobile {
+        width: 398px;
+    }
+
+    &_1 {
+        background: url('../assets/img/services-dev.svg') top 38px left 32px/48px no-repeat, rgba(37, 37, 50, 0.6);
+    }
+
+    &_2 {
+        background: url('../assets/img/services-design.svg') top 38px left 32px/48px no-repeat, rgba(37, 37, 50, 0.6);
+    }
+
+    &_3 {
+        background: url('../assets/img/services-consulting.svg') top 38px left 32px/48px no-repeat, rgba(37, 37, 50, 0.6);
+    }
+
+    &_4 {
+        background: url('../assets/img/services-games.svg') top 38px left 32px/48px no-repeat, rgba(37, 37, 50, 0.6);
+    }
+
+    &_5 {
+        background: url('../assets/img/services-events.svg') top 38px left 32px/48px no-repeat, rgba(37, 37, 50, 0.6);
+    }
+
+    &_6 {
+        background: url('../assets/img/services-entertainment.svg') top 38px left 32px/48px no-repeat, rgba(37, 37, 50, 0.6);
+    }
+
+    &__title {
+        font-weight: 400;
+        font-size: 20px;
+        color: $greyscale-white;
+        margin: 0;
+        margin-bottom: 12px;
+    }
+
+    &__descr {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 200%;
+        color: $greyscale-grey-1;
+        margin: 0;
+    }
+}

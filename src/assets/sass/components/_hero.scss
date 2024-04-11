@@ -86,30 +86,9 @@
     }
 
     &__player {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         width: 196px;
         min-height: 128px;
         margin-right: 34px;
-        cursor: pointer;
-        &:hover {
-            .hero__video-play {
-                transform: translate(-50%, -50%) scale(1.5);
-            }
-            &::after {
-                content: '';
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                width: 100%;
-                height: 100%;
-                background-color: rgba($greyscale-black-100, .4);
-                z-index: 7;
-            }
-        }
         @include desktop-md {
             margin-right: 0;
         }
@@ -117,51 +96,6 @@
             position: absolute;
             top: 130%;
         }
-    }
-
-    &__video {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #21232e;
-    }
-
-    &__video-img {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 5;
-
-    }
-
-    &__video-play {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-
-        width: 28px;
-        height: 28px;
-        border-radius: 100%;
-        border: 1px solid $greyscale-white;
-        background-color: transparent;
-        transition: .3s transform ease;
-        z-index: 9;
-    }
-
-    &__video-svg {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 10px;
-        height: 11px;
-        use {
-            fill: $greyscale-white;
-        }
-        
     }
 
     &__right {
@@ -175,7 +109,7 @@
     }
 
     &__picture {
-        @include adaptive-size('width', 526, 300);
+        @include adaptive-size('width', 526, 300, 1920, 430);
         display: flex;
         justify-content: flex-end;
         @include mobile {
@@ -244,3 +178,6 @@
         margin: 0;
     }
 }
+
+
+

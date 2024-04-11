@@ -1,6 +1,7 @@
 $container-offset: 15px;
-$container-width: 1200px;
+$container-width: 1230px;
 $section-offset: 150px;
+$section-offset-sm: 100px;
 
 $grid-gap: 32px;
 
@@ -21,6 +22,7 @@ $alerts-error: #ff4747;
 $alerts-warning: #facc15;
 
 $gradient: linear-gradient(90deg, #0cbaf1 0%, #e95ce9 100%);
+$gradient-text: linear-gradient(90deg, #0cbaf1 0%, #e95ce9 15%);
 $gradient-light: linear-gradient(90deg, lighten(#0cbaf1, 10%) 0%, lighten(#e95ce9, 10%) 100%);
 
 $burger-line-color: #fff;
