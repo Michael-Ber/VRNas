@@ -1,47 +1,69 @@
 .service {
 
+    &__titles {
+        grid-column: 1 / span 4;
+        @include tablet-sm {
+            grid-column: span 4;
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
 
 
-		&__titles {
-            grid-column: 1 / span 4;
-            @include tablet-sm {
-                grid-column: span 4;
-                margin: 0 auto;
-                text-align: center;
-            }
-		}
 
-	
+    &__subtitle {
+        @include tablet-sm {
+            margin-bottom: 12px;
+        }
+    }
 
-		&__subtitle {
-            @include tablet-sm {
-                margin-bottom: 12px;
-            }
-		}
+    &__text {
+        grid-column: 6 / span 7;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 175%;
+        margin: 0;
+        padding-bottom: 46px;
+        @include tablet-sm {
+            grid-column: span 4;
+        }
+    }
 
-		&__text {
-            grid-column: 6 / span 7;
-            font-weight: 300;
-            font-size: 16px;
-            line-height: 175%;
-            margin: 0;
-            padding-bottom: 46px;
-            @include tablet-sm {
-                grid-column: span 4;
-            }
-		}
+    &__cards {
+        grid-column: 1 / span 12;
+        padding-bottom: 135px;
+        row-gap: 32px;
+        @include tablet {
+            padding-bottom: 60px;
+        }
+        @include tablet-sm {
+            grid-column: span 4;
+        }
+        @include tablet-sm {
+            padding-bottom: 0;
+        }
+    }
 
-		&__cards {
-            grid-column: 1 / span 12;
-            padding-bottom: 135px;
-            row-gap: 32px;
-            @include tablet-sm {
-                grid-column: span 4;
-            }
-            @include tablet-sm {
-                padding-bottom: 0;
-            }
-		}
+    &__more {
+        opacity: 0;
+        visibility: hidden;
+        width: 177px;
+        height: 50px;
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(255, 255, 255, 0.06);
+        transition: .3s opacity ease;
+        backdrop-filter: blur(4px);
+
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: 0.11em;
+        text-transform: uppercase;
+        text-align: center;
+    }
 }
 .service-card {
     position: relative;
@@ -55,6 +77,19 @@
     }
     &:nth-child(3n + 3) {
         top: 135px;
+    }
+
+    &:hover {
+        .service__more {
+            opacity: 1;
+            visibility: visible;
+        }
+        .service-card__title {
+            opacity: .4;
+        }
+        .service-card__descr {
+            opacity: .1;
+        }
     }
 
     @include tablet {
@@ -111,6 +146,7 @@
         color: $greyscale-white;
         margin: 0;
         margin-bottom: 12px;
+        transition: .3s opacity ease;
     }
 
     &__descr {
@@ -119,5 +155,6 @@
         line-height: 200%;
         color: $greyscale-grey-1;
         margin: 0;
+        transition: .3s opacity ease;
     }
 }

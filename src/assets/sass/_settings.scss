@@ -20,7 +20,7 @@ html {
 
 .site-container {
     background: $greyscale-black-100;
-    max-width: 1440px;
+    max-width: $site-container-width;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -65,7 +65,7 @@ a {
         border-width: 1px;
         border-image-slice: 1;
         border-image-source: $gradient;
-
+        text-transform: uppercase;
         font-weight: 300;
         font-size: 16px;
         line-height: 175%;
@@ -188,22 +188,22 @@ a {
     }
     
     
-    &__video {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #21232e;
-    }
+    // &__video {
+    //     position: absolute;
+    //     top: 50%;
+    //     left: 50%;
+    //     transform: translate(-50%, -50%);
+    //     background-color: #21232e;
+    // }
     
-    &__video-img {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 5;
+    // &__video-img {
+    //     position: absolute;
+    //     top: 50%;
+    //     left: 50%;
+    //     transform: translate(-50%, -50%);
+    //     z-index: 5;
     
-    }
+    // }
     
     &__video-play {
         position: absolute;
@@ -231,5 +231,23 @@ a {
             fill: $greyscale-white;
         }
         
+    }
+}
+
+.accordion {
+    &__item {
+        user-select: none;
+        &_active {
+            .accordion__content {
+                visibility: visible;
+            }
+
+        }
+    }
+    &__content {
+        visibility: hidden;
+        max-height: 0;
+        overflow: hidden;
+        transition: .3s max-height ease;
     }
 }

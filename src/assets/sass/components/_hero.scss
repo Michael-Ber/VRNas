@@ -88,13 +88,18 @@
     &__player {
         width: 196px;
         min-height: 128px;
-        margin-right: 34px;
+        background: url('../assets/img/webp/manVR.webp') center center/contain no-repeat, $greyscale-black-80;
+        z-index: 9;
         @include desktop-md {
             margin-right: 0;
         }
         @include tablet-sm {
             position: absolute;
             top: 130%;
+        }
+        @include mobile {
+            width: 147px;
+            height: 96px;
         }
     }
 

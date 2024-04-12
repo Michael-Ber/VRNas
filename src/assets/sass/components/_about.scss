@@ -1,101 +1,98 @@
 .about {
-    padding-bottom: 23px;
     &__container {
         @include tablet {
             align-items: center;
         }
     }
     &__left {
-        position: relative;
         grid-column: 1 / span 6;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        @include tablet {
+            justify-content: center;
+            grid-column: 1 / span 12;
+            padding: 125px 0 65px 0;
+        }
         @include tablet-sm {
-            margin-bottom: 65px;
+            justify-content: flex-start;
+            grid-column: span 4;
+        }
+        @include mobile {
+            padding: 95px 0 65px 0;
         }
     }
 
     &__left-wrapper {
         position: relative;
-        &::after {
-            content: '';
-            width: 398px;
-            height: 496px;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            background-color: $greyscale-black-80;
-            z-index: 0;
-            @include desktop-md {
-                @include adaptive-size('width', 398, 350, 1199, 768);
-                @include adaptive-size('height', 496, 340, 1199, 768);
-            }
-        }
-
-        @include tablet-sm {
-            &::after {
-                width: 398px;
-                height: 496px;
-            }
+        width: 398px;
+        height: 496px;
+        top: 125px;
+        background: $greyscale-black-80;
+        @include tablet {
+            top: 0;
+            right: 0;
         }
         @include mobile {
-            &::after {
-                width: 300px;
-                height: 370px;
-            }
+            width: 296px;
+            height: 370px;
         }
     }
 
 
     &__player {
         width: 196px;
-        min-height: 128px;
+        height: 128px;
+        background: url('../assets/img/webp/choose-glasses.webp') center center/cover no-repeat, $greyscale-black-80;
+
         position: absolute;
         bottom: -23px;
-        right: 50px;
+        right: -128px;
         z-index: 9;
-        @include tablet {
-            right: 0;
-        }
-        @include tablet-sm {
-            @include adaptive-size('right', 230, 30, 767, 576);
+
+        @include desktop-md{
+            right: -50px;
         }
         @include mobile {
-            @include adaptive-size('right', 120, 0, 575, 430);
             width: 147px;
             height: 96px;
         }
-        @media(max-width: "429px") {
-            right: 0;
-        }
     }
 
-    &__video {
-        @include mobile {
-            width: 100%;
-            height: 100%;
-        }
-    }
 
     &__picture-lg {
-        position: relative;
+        position: absolute;
+        bottom: 0;
         left: 20px;
-        z-index: 9;
-        // @include tablet-sm {
-        //     @include adaptive-size('left', 85, 10, 767, 430);
-            
-        // }
+        width: 518px;
+        @include desktop-lg {
+            @include adaptive-size('width', 518, 480, 1399, 992);
+        }
+        @include tablet {
+            width: 518px;
+        }
+        @include mobile {
+            width: 418px;
+        }
     }
-    &__picture-sm {
-        position: relative;
-        z-index: 1;
-    }
-
-    &__picture-img {
-    }
-
-    &__video-play {
-    }
-
-    &__video-svg {
+    &__picture-bg {
+        width: 398px;
+        height: 496px;
+        &::before {
+            content: url('../assets/img/img-light.svg');
+            display: block;
+            position: absolute;
+            top: 0;
+            right: -35%;
+            z-index: 1;
+            @include desktop-md {
+                right: -60%;
+            }
+            @include mobile {
+                right: -80%;
+                top: -30%;
+            }
+        }
     }
 
     &__right {
@@ -103,6 +100,11 @@
         grid-column: span 6;
         @include tablet {
             padding: 0;
+            grid-column: 1 / span 12;
+        }
+        @include tablet-sm {
+            padding: 0;
+            grid-column: span 4;
         }
     }
 
@@ -144,16 +146,5 @@
     &__more {
         width: 168px;
         height: 50px;
-    }
-}
-.player-block {
-
-    &__video {
-    }
-
-    &__video-play {
-    }
-
-    &__video-svg {
     }
 }
