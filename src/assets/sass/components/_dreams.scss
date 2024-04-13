@@ -13,6 +13,9 @@
 		&__video-wrapper {
             position: relative;
             margin-bottom: 48px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             &:hover {
                 .dreams__video-play {
                     transform: translate(-50%, -50%) scale(1.2);
@@ -39,6 +42,10 @@
             position: absolute;
             top: 52px;
             left: 34px;
+            @include tablet-sm {
+                top: 22px;
+                left: 16px;
+            }
         }
 
 		&__video-service {
@@ -74,7 +81,7 @@
             transition: .3s transform ease;
             z-index: 1;
             cursor: pointer;
-            @include mobile {
+            @include tablet-sm {
                 svg {
                     width: 40px;
                     height: 40px;

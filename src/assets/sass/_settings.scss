@@ -61,7 +61,7 @@ a {
         }
     }
     &_secondary {
-        border: 10px solid;
+        border-style: solid;
         border-width: 1px;
         border-image-slice: 1;
         border-image-source: $gradient;
