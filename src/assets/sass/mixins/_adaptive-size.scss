@@ -11,3 +11,7 @@
     $addSize: $pcSize - $mobSize;
     #{$propName}: calc((#{$addSize} / (#{$maxWidthRem} - #{$minWidthRem}) * ((100vw - #{$minWidthRem + rem})) + #{$mobSize + rem}));
 }
+@mixin adaptive-size-circle($propName, $pcSize, $mobSize, $maxWidth, $minWidth, $angle) {
+    $addSize: $pcSize - $mobSize;
+    #{$propName}: rotate($angle + deg) translate(calc(-50% + (#{$addSize} / (#{$maxWidth} - #{$minWidth}) * ((100vw - #{$minWidth + px})) + #{$mobSize + px})), 0) rotate(-$angle + deg);
+}
