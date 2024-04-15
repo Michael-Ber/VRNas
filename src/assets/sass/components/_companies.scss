@@ -1,23 +1,26 @@
 .companies {
     padding-bottom: 200px;
-		&__container {
-            max-width: 1084px;
-            text-align: center;
-            margin: 0 auto;
-            padding: 0 15px;
-		}
+    @include mobile {
+        padding-bottom: 90px;
+    }
+    &__container {
+        max-width: 1084px;
+        text-align: center;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
 
-		&__title {
-            padding-bottom: 12px;
-		}
+    &__title {
+        padding-bottom: 12px;
+    }
 
-		&__subtitle {
-            padding-bottom: 58px;
-		}
+    &__subtitle {
+        padding-bottom: 58px;
+    }
 
-		&__content {
-            position: relative;
-		}
+    &__content {
+        position: relative;
+    }
 }
 .content-companies {
     &__center {

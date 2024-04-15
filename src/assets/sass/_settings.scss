@@ -78,6 +78,16 @@ a {
             color: $main-colors-blue;
         }
     }
+    &_arrow {
+        position: relative;
+        &::after {
+            content: url('../assets/img/arrow-right.svg');
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
 }
 
 .list-reset {
@@ -250,4 +260,16 @@ a {
         overflow: hidden;
         transition: .3s max-height ease;
     }
+}
+
+.badge {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+    text-align: center;
+    color: $greyscale-white;
+    background-color: rgba($greyscale-white, .3);
+    border-radius: 16px;
+    padding: 2px 10px;
 }
