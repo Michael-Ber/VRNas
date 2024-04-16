@@ -86,12 +86,6 @@
         }
     }
     &__item {
-        // &_1 {
-        //     transform: rotate(180deg) translate(calc(-50% + 497px), 0) rotate(-180deg);
-        //     @include desktop-sm {
-        //         @include adaptive-size-circle('transform', 497, 195, 1054, 430, 180);
-        //     }
-        // } example
         use {
             fill: $greyscale-white
         }

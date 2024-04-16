@@ -9,7 +9,7 @@
     }
 }
 @mixin desktop-sm {
-    @media(max-width: 1054px) {
+    @media(max-width: 1024px) {
         @content;
     }
 }

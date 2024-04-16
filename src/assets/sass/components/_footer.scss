@@ -1,0 +1,199 @@
+.footer {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 175%;
+    color: $greyscale-white;
+    padding: 182px 0 47px 0;
+    background: url('../assets/img/webp/footer-waves.webp') bottom left/70% no-repeat;
+    @include mobile {
+        padding-top: 92px;
+    }
+
+    &__main {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid;
+        border-image-slice: 1;
+        border-image-source: $gradient;
+        padding-bottom: 33px;
+        @include desktop-sm{
+            flex-direction: column;
+        }
+    }
+
+    &__left {
+        display: grid;
+        grid-template-columns: 1fr;
+        
+        @include desktop-sm{
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px; 
+            padding-bottom: 68px;
+        }
+    }
+
+    &__logo {
+        @include tablet {
+        }
+    }
+
+    &__socials {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 20px;
+        @include tablet-sm {
+            justify-content: flex-start;
+        }
+    }
+
+    &__socials-item {
+        position: relative;
+        width: 46px;
+        height: 46px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 100%;
+            border: 1px solid transparent;
+            background: $gradient border-box;
+            -webkit-mask: 
+                linear-gradient(#fff 0 0) padding-box,
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude; 
+        }
+        &:hover {
+            .footer__socials-svg {
+                use {
+                    fill: $main-colors-blue;
+                }
+            }
+        }
+    }
+
+    &__socials-svg {
+        use {
+            transition: .3s fill ease;
+            fill: $greyscale-white;
+        }
+        &_twitter {
+            width: 18px;
+            height: 14px;
+            
+        }
+        &_facebook {
+            width: 10px;
+            height: 20px;
+        }
+        &_instagram {
+            width: 22px;
+            height: 22px;
+        }
+        &_github {
+            width: 21px;
+            height: 20px;
+        }
+    }
+
+    &__right {
+        display: grid;
+        grid-template-columns: 1fr 1fr 2fr;
+        gap: 50px;
+        @include desktop-md{
+            gap: 30px;
+        }
+        @include desktop-sm{
+            grid-template-columns: 1fr 1fr 320px; 
+        }
+        @include tablet-sm{
+            grid-template-columns: repeat(2, 1fr); 
+            row-gap: 60px;
+        }
+    }
+
+    &__address {
+        font-style: normal;
+    }
+
+    &__mail {
+    }
+
+    &__phone {
+    }
+
+    &__copyright {
+        text-align: center;
+        padding-top: 32px;
+    }
+}
+.footer-nav {
+    
+    display: flex;
+    justify-content: space-between;
+    gap: 150px;
+    @include desktop-md {
+        @include adaptive-size('gap', 150, 80, 1200, 992);
+    }
+    @include tablet {
+        gap: 80px;
+    }
+    &__list {
+    }
+
+    &__item {
+
+        &_header {
+            font-weight: 600;
+        }
+
+        &:nth-child(n):not(:last-child) {
+            margin-bottom: 16px;
+        }
+
+    }
+
+    &__link {
+        color: inherit;
+    }
+}
+.footer-help {
+    @include tablet-sm{
+        grid-column: span 2;
+    }
+    &__title {
+        display: block;
+        font-weight: 600;
+        padding-bottom: 16px;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 8px;
+        color: $greyscale-white;
+        &:nth-child(n):not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+    &__svg {
+        width: 20px;
+        height: 20px;
+        use {
+            fill: currentColor
+        }
+    }
+}
+.footer-link {
+    transition: .3s color ease;
+    &:hover {
+        color: $main-colors-blue;
+    }
+}

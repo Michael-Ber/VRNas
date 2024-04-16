@@ -127,6 +127,9 @@ gulp.task("scripts", () => {
               ]
             }
           }
+        },{
+          test: /\.(sass|less|css)$/,
+          use: ['style-loader', 'css-loader', 'less-loader']
         }]
       },
       devtool: !isProd ? 'source-map' : false

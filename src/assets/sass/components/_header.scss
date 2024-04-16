@@ -23,6 +23,7 @@
 }
 .logo {
     transition: .3s transform ease-in-out;
+    cursor: pointer;
     &:hover {
         transform: scale(1.1);
     }
