@@ -5,7 +5,6 @@
     $burger-line-color: $greyscale-white;
 
     display: none;
-    
     @include tablet{
         display: block;
     }
@@ -26,7 +25,7 @@
         border-image-source: $gradient;
         padding: 10px;
         cursor: pointer;
-
+        box-sizing: border-box;
 
     }
     &__line {

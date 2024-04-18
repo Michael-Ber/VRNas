@@ -258,8 +258,14 @@ a {
         visibility: hidden;
         max-height: 0;
         overflow: hidden;
-        transition: .3s max-height ease;
+        transition: .3s max-height ease-in-out, .2s visibility ease-in-out;
     }
+}
+
+.accordion-item-border {
+    border: 1px solid;
+    border-image-slice: 1;
+    border-image-source: $gradient;
 }
 
 .badge {
@@ -272,4 +278,28 @@ a {
     background-color: rgba($greyscale-white, .3);
     border-radius: 16px;
     padding: 2px 10px;
+}
+
+.arrow {
+    width: 10px;
+    height: 10px;
+    transform: rotate(180deg);
+    transition: .3s transform ease;
+    &_active {
+        transform: rotate(0deg);
+    }
+    use {
+        fill: $greyscale-white;
+    }
+    cursor: pointer;
+}
+
+.white {
+    color: white;
+}
+
+.flex-gap-10 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }

@@ -1,0 +1,126 @@
+.page-about-about {
+    position: relative;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        // align-items: stretch;
+        @include tablet {
+            flex-direction: column;
+            align-items: center;
+            gap: 100px;
+        }
+    }
+    &__img {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 990px;
+        height: 721px;
+        @include tablet {
+            top: 40%;
+        }
+        @include mobile {
+            top: 60%;
+            
+        }
+    }
+
+    &__left {
+        flex-basis: 674px;
+        padding: 0 60px 0 0;
+        @include desktop-md {
+            flex-shrink: 1;
+            flex-basis: auto;
+        }
+        @include tablet {
+            padding: 0;
+        }
+    }
+
+    &__title {
+        padding-bottom: 12px;
+    }
+
+    &__subtitle {
+        padding-bottom: 18px;
+    }
+
+    &__text {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 175%;
+        color: $greyscale-grey-2;
+    }
+
+    &__right {
+        position: relative;
+        min-width: 398px;
+        min-height: 496px;
+        @include mobile {
+            min-width: 315px;
+            min-height: 392px;
+        }
+    }
+
+    &__right-wrapper {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        right: 0;
+        bottom: 0;
+        background: $greyscale-black-80;
+        @include mobile {
+            right: -10%; 
+        }
+    }
+
+    &__picture-lg {
+        position: absolute;
+        bottom: 0;
+        left: 45%;
+        transform: translateX(-50%);
+        width: 100%;
+    }
+
+    &__picture-bg {
+        width: 100%;
+        height: 100%;
+        &::before {
+            content: url('../assets/img/img-light.svg');
+            display: block;
+            position: absolute;
+            top: 0;
+            right: -35%;
+            z-index: 1;
+            @include mobile {
+                right: -30%;
+                top: 0;
+            }
+        }
+    }
+
+    &__player {
+        width: 196px;
+        height: 128px;
+        background: url('../assets/img/webp/manVR.webp') center center/contain no-repeat, $greyscale-black-80;
+
+        position: absolute;
+        bottom: -33px;
+        left: -98px;
+        z-index: 9;
+
+        @include desktop-md {
+            left: -20px;
+        }
+        @include mobile {
+            width: 147px;
+            height: 96px;
+        }
+    }
+
+    &__video-play {
+    }
+
+    &__video-svg {
+    }
+}

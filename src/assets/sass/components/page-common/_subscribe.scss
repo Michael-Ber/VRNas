@@ -1,0 +1,111 @@
+.subscribe {
+    
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 38px 74px 31px 74px;
+        background: $gradient;
+        @include desktop-md {
+            padding: 38px 30px 31px 30px;
+        }
+        @include tablet {
+            flex-direction: column;
+        }
+        @include mobile {
+            padding: 38px 12px 31px 12px;
+        }
+    }
+
+    &__title {
+        margin: 0;
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 145%;
+        letter-spacing: -0.01em;
+        color: $greyscale-white;
+        max-width: 50%;
+        @include desktop-md {
+            font-size: 34px;
+        }
+        @include tablet {
+            max-width: 100%;
+            padding-bottom: 8px;
+            text-align: center;
+        }
+
+        @include mobile {
+            font-size: 28px;
+        }
+    }
+
+    &__form {
+        background: rgba(255, 255, 255, 0.07);
+        width: 365px;
+        height: 56px;
+        padding: 4px 4px 4px 14px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__label {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 10px;
+        cursor: pointer;
+        &::before {
+            content: url('../assets/img/mail.svg');
+            width: 24px;
+            height: 24px;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    &__email {
+        width: 100%;
+        font-weight: 400;
+        line-height: 175%;
+        color: $greyscale-white;
+        background-color: transparent;
+        border: none;
+        height: 100%;
+        padding: 0 10px 0 0;
+        outline: none;
+        cursor: pointer;
+        &::placeholder {
+            color: $greyscale-white;
+            
+        }
+    }
+
+    &__send {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 49px;
+        height: 49px;
+        background: rgba(255, 255, 255, 0.21);
+        flex-shrink: 0;
+        transition: .3s box-shadow ease;
+        &:hover {
+            box-shadow: 0 0 5px 0 $greyscale-white;
+            .subscribe-articles__svg {
+                use {
+                    fill: $main-colors-blue
+                }
+            }
+        }
+    }
+
+    &__svg {
+        width: 16px;
+        height: 16px;
+        use {
+            transition: .3s fill ease;
+            fill: $greyscale-white
+        }
+    }
+}

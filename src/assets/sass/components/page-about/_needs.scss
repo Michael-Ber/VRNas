@@ -1,0 +1,168 @@
+.needs {
+    &__left {
+        grid-column: 1 / span 6;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-bottom: 190px;
+        order: 1;
+        @include tablet {
+            grid-column: 1 / span 12;
+            justify-content: center;
+            order: 1;
+            padding: 170px 0 75px 0;
+        }
+        @include tablet-sm {
+            grid-column: span 4;
+        }
+        @include mobile {
+            padding: 120px 0 75px 0;
+        }
+
+        
+    }
+
+    &__title {
+        padding-bottom: 12px;
+    }
+
+    &__subtitle {
+        padding-bottom: 32px;
+    }
+
+    
+
+    &__right {
+        position: relative;
+        grid-column: span 6;
+        padding-top: 94px;
+        z-index: 9;
+        order: 2;
+        @include tablet {
+            grid-column: 1 / span 12;
+            padding-top: 0;
+            order: 2;
+        }
+        @include tablet-sm {
+            grid-column: span 4;
+            padding-top: 0;
+            order: 2;
+        }
+        
+    }
+
+    &__left-wrapper {
+        position: relative;
+        width: 398px;
+        height: 496px;
+        right: 20px;
+        top: $section-offset + 15px; //15px man head
+        background: $greyscale-black-80;
+        @include tablet {
+            top: 0;
+            right: 0;
+        }
+        @include mobile {
+            width: 296px;
+            height: 370px;
+        }
+    }
+
+    &__picture-lg {
+        position: absolute;
+        bottom: 0;
+        left: 55%;
+        transform: translateX(-50%);
+        width: 563px;
+        @include desktop-lg {
+            @include adaptive-size('width', 563, 500, 1399, 992);
+            left: 0;
+            transform: unset;
+        }
+        @include tablet {
+            width: 563px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        @include mobile {
+            width: 418px;
+        }
+    }
+
+    &__picture-bg {
+        width: 398px;
+        height: 496px;
+        &::before {
+            content: url('../assets/img/img-light.svg');
+            display: block;
+            position: absolute;
+            top: 0;
+            right: -50%;
+            z-index: 1;
+            @include desktop-md {
+                right: -60%;
+            }
+            @include mobile {
+                right: -80%;
+                top: -30%;
+            }
+        }
+    }
+
+    &__player {
+        width: 196px;
+        height: 128px;
+        background: url('../assets/img/webp/choose-glasses.webp') center center/cover no-repeat, $greyscale-black-80;
+
+        position: absolute;
+        bottom: -23px;
+        right: -20px;
+        z-index: 9;
+
+        @include mobile {
+            width: 147px;
+            height: 96px;
+        }
+    }
+
+}
+
+.accordion-needs {
+
+    &__item {
+        &:nth-child(n):not(:last-child) {
+            padding-bottom: 48px;
+        }
+    }
+
+    &__control {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        font-weight: 500;
+        font-size: 20px;
+        color: $greyscale-white;
+        height: 38px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+        text-align: left;
+        margin-bottom: 12px;
+        .arrow {
+            width: 10px;
+            height: 10px;
+            transition: .3s transform ease;
+            cursor: pointer;
+            use {
+                fill: $greyscale-white;
+            }
+        }
+    }
+
+    &__content {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 175%;
+        
+        color: $greyscale-grey-2;
+    }
+}

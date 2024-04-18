@@ -1,7 +1,10 @@
 .header {
     position: relative;
     padding: 30px 0;
-    z-index: 10;
+    z-index: 9;
+    &__under {
+        z-index: 100;
+    }
     &__container {
         display: flex;
         justify-content: space-between;
@@ -20,22 +23,14 @@
             display: none;
         }
     }
-}
-.logo {
-    transition: .3s transform ease-in-out;
-    cursor: pointer;
-    &:hover {
-        transform: scale(1.1);
-    }
-}
-.nav {
-    padding-bottom: 10px;
-
-    @include tablet {
-        display: none;
+    &__nav {
+        @include tablet {
+            display: none;
+        }
+        padding-bottom: 10px;
     }
 
-    &__list {
+    &__nav-list {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -45,7 +40,8 @@
         color: $greyscale-white;
     }
 
-    &__item {
+    &__nav-item {
+        position: relative;
         display: block;
         flex-shrink: 0;
         &_more {
@@ -55,11 +51,21 @@
             cursor: pointer;
         }
     }
+}
+.logo {
+    transition: .3s transform ease-in-out;
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+.nav {
+
+    
 
     &__item-svg {
         width: 10px;
         height: 7px;
-        transform: rotate(180deg);
         use {
             fill: $greyscale-white
         }
@@ -67,15 +73,25 @@
 
 
     &__sublist {
+        position: absolute;
+        top: calc(100% + 20px);
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
         font-weight: 300;
         line-height: 175%;
+        padding: 10px;
         color: $greyscale-white;
+        box-shadow: 0 0 10px 0 rgba($main-colors-blue, .9);
+        background-color: rgba($main-colors-blue, .9);
+        // visibility: hidden;
+        // opacity: 0;
     }
 
     &__subitem {
-        visibility: hidden;
-        opacity: 0;
-        display: none;
+        white-space: nowrap;
     }
 
 }
@@ -89,4 +105,10 @@
     &:hover {
         color: $main-colors-purple;
     }
+}
+.header-waves {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
 }

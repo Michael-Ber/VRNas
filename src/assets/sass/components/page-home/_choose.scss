@@ -112,7 +112,6 @@
         z-index: 9;
 
         @include mobile {
-            // @include adaptive-size('right', 120, 0, 575, 430);
             width: 147px;
             height: 96px;
         }
@@ -122,44 +121,32 @@
 
 .accordion-choose {
 
-		&__item {
-            &:nth-child(n):not(:last-child) {
-                padding-bottom: 48px;
-            }
-		}
+    &__item {
+        &:nth-child(n):not(:last-child) {
+            padding-bottom: 48px;
+        }
+    }
 
-		&__control {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            font-weight: 500;
-            font-size: 20px;
-            color: $greyscale-white;
-            height: 38px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.35);
-            text-align: left;
-            margin-bottom: 12px;
-            .arrow {
-                width: 10px;
-                height: 10px;
-                transform: rotate(180deg);
-                transition: .3s transform ease;
-                cursor: pointer;
-                use {
-                    fill: $greyscale-white;
-                }
-                &_active {
-                    transform: rotate(0deg);
-                }
-            }
-		}
+    &__control {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        font-weight: 500;
+        font-size: 20px;
+        color: $greyscale-white;
+        height: 38px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+        text-align: left;
+        margin-bottom: 12px;
+    }
 
-		&__content {
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 175%;
-            color: $greyscale-grey-2;
-		}
+    &__content {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 175%;
+        
+        color: $greyscale-grey-2;
+    }
 }
 

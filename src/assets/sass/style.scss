@@ -3,14 +3,28 @@
 @import './settings';
 @import './fonts';
 
-@import './components/header';
-@import './components/hero';
-@import './components/about';
-@import './components/service';
-@import './components/choose';
-@import './components/dreams';
-@import './components/testimonial';
-@import './components/price';
-@import './components/companies';
-@import './components/articles';
-@import './components/footer';
+// COMMON
+
+@import './components/page-common/header';
+@import './components/page-common/footer';
+@import './components/page-common/subscribe';
+@import './components/page-common/pagename';
+
+// HOMEPAGE
+
+@import './components/page-home/hero';
+@import './components/page-home/about';
+@import './components/page-home/service';
+@import './components/page-home/choose';
+@import './components/page-home/dreams';
+@import './components/page-home/testimonial';
+@import './components/page-home/price';
+@import './components/page-home/companies';
+@import './components/page-home/articles';
+
+//ABOUT PAGE
+@import './components/page-about/about';
+@import './components/page-about/choose';
+@import './components/page-about/needs';
+@import './components/page-about/team';
+@import './components/page-about/faq';
