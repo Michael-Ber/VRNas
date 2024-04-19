@@ -1,0 +1,203 @@
+.design {
+    min-height: 1540px;
+    @include mobile {
+        min-height: 1690px;
+    }
+    &__body {
+        position: relative;
+        margin: 0 auto;
+    }
+
+    &__container {
+        padding: 0;
+    }
+
+    &__radial {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        user-select: none
+    }
+
+    &__content {
+        position: absolute;
+        top: 234px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        max-width: 627px;
+        @include tablet-sm {
+            padding: 0 15px;
+        }
+    }
+
+    &__radial-center {
+        @include circleImages(7, 458, 458);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 102px;
+        height: 102px;
+    }
+
+    &__radial-item {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+        background: rgba(37, 37, 50, 0.8);
+
+        font-weight: 400;
+        font-size: 14px;
+        text-align: center;
+        color: $greyscale-white;
+
+        transition: .3s transform ease;
+
+        &::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 100%;
+            border: 1px solid transparent;
+            background: linear-gradient(to right, rgba($greyscale-grey-1, .6) 5%, rgba($greyscale-grey-1, .1) 70%) border-box;
+            -webkit-mask: 
+                linear-gradient(#fff 0 0) padding-box,
+                linear-gradient(#fff 0 0 );
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+        }
+
+        &_active {
+            &::after {
+                background: $gradient border-box;
+            }
+        }
+    }
+
+    &__controls {
+        display: none;
+        position: absolute;
+        top: 170px;
+        left: 50%;
+        transform: translateX(-50%);
+        align-items: center;
+        gap: 55px;
+        @include tablet {
+            display: flex;
+        }
+    }
+
+    &__controls-btn {
+        &:disabled {
+            .radial-arrow {
+                use {
+                    fill: $greyscale-grey-2;
+                }
+            }
+        }
+    }
+
+    &__radial-prev {
+        transform: rotate(180deg);
+    }
+    &__radial-next {
+        top: 20%;
+        left: 50%;
+    }
+    
+    &__title {
+        text-align: center;  
+        padding-bottom: 12px;
+    }
+
+    &__subtitle {
+        text-align: center;
+        padding-bottom: 16px;
+    }
+
+    &__circles {
+        width: 1055px;
+        height: 1055px;
+    }
+
+    &__text {
+        font-weight: 300;
+        line-height: 175%;
+        color: $greyscale-grey-2;
+        &_top {
+            margin-bottom: 54px;
+        }
+        &_bottom {
+            margin-bottom: 32px;
+        }
+    }
+
+    &__paragraph {
+        margin: 0;
+        &:not(:last-child) {
+            margin-bottom: 50px;
+        }
+    }
+
+    &__include {
+        max-width: 430px;
+        margin: 0 auto;
+        margin-bottom: 32px;
+    }
+
+    &__btn {
+        display: block;
+        width: 174px;
+        height: 50px;
+        margin: 0 auto;
+    }
+}
+.radial-arrow {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    use {
+        transition: .3s fill ease;
+        fill: rgba($main-colors-blue, .5);
+    }
+    &:hover {
+        use {
+            fill: $main-colors-blue;
+        }
+    }
+}
+.include {
+    background: rgba($greyscale-black-80, .6);
+    padding: 30px 32px 35px 32px;
+    font-weight: 400;
+    line-height: 175%;
+    color: $greyscale-white;
+    &__title {
+        margin: 0;
+        padding-bottom: 24px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        &::before {
+            content: url('../assets/img/about-checkbox.svg');
+        }
+        &:not(:last-child) {
+            margin-bottom: 14px;
+        }
+    }
+}
+
+

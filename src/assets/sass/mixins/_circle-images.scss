@@ -1,6 +1,6 @@
-@mixin circleImages($nb-items, $circle-size, $max-width, $min-width) {
-    $maxW: 1054;
-    $minW: 430;
+@mixin circleImages($nb-items, $max-width, $min-width) {
+    $maxW: 1054; //размер экрана с которого начинает меняться размер окружности
+    $minW: 320; //минимальный размер экрана
     $addSize: $max-width - $min-width;
     $half-parent: calc((#{$addSize} / (#{$maxW} - #{$minW}) * ((100vw - #{$minW + px})) + #{$min-width + px}));
     $angle: (180 / ($nb-items - 1));
@@ -8,8 +8,10 @@
     @for $i from 1 through $nb-items {
         >:nth-of-type(#{$i}) {
             
-            transform: rotate($rot * 1deg) translate(calc(-50% + #{$half-parent}), 0) rotate($rot * -1deg);
+            transform: rotate($rot * 1deg) translate($half-parent, 0) rotate($rot * -1deg);
         }
         $rot: ($rot + $angle);
     }
 }
+
+// $max-width & $min-width - максмальный и минимальный радиус окружности по которой располагаются элементы

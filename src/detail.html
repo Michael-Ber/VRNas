@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+@@include('partials/page-common/head.html', {
+    "title": "VRNas | Detail"
+})
+<body class="page__body">
+    <div class="site-container">
+        @@include('partials/page-common/header.html')
+        <main class="main">
+            <img src="../assets/img/waves.svg" alt="background waves" class="main__waves">
+            @@include('partials/page-common/pageName.html', {
+                "title": "Detail Service"
+            })
+            @@include('partials/page-detail/design.html')
+            <!-- @@include('partials/page-about/about.html')
+            @@include('partials/page-about/choose.html')
+            @@include('partials/page-about/needs.html')
+            @@include('partials/page-about/team.html')
+            @@include('partials/page-home/companies.html')
+            @@include('partials/page-about/faq.html')
+            @@include('partials/page-common/subscribe.html') -->
+        </main>
+        @@include('partials/page-common/footer.html')
+    </div>
+    
+</body>
+</html>
