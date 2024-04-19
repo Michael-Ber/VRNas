@@ -1,10 +1,10 @@
 .faq {
-
+    background: url('../assets/img/img-light.svg') top 30% left 100%/ 80% no-repeat;
     &__title {
         grid-column: 3 / span 8;
         text-align: center;
         padding-bottom: 12px;
-        @include tablet {
+        @include tablet-sm {
             grid-column: span 4;
         }
     }
@@ -13,7 +13,7 @@
         grid-column: 3 / span 8;
         text-align: center;
         padding-bottom: 24px;
-        @include tablet {
+        @include tablet-sm {
             grid-column: span 4;
         }
     }
@@ -27,14 +27,14 @@
         color: $greyscale-grey-2;
         margin: 0;
         padding-bottom: 48px;
-        @include tablet {
+        @include tablet-sm {
             grid-column: span 4;
         }
     }
 
     &__accordion {
         grid-column: 3 / span 8;
-        @include tablet {
+        @include tablet-sm {
             grid-column: span 4;
         }
     }

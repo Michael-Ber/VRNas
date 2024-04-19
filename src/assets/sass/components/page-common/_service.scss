@@ -7,13 +7,16 @@
             margin: 0 auto;
             text-align: center;
         }
+        
     }
 
-
+    &__title {
+        padding-bottom: 12px;
+    }
 
     &__subtitle {
         @include tablet-sm {
-            margin-bottom: 12px;
+            margin-bottom: 24px;
         }
     }
 

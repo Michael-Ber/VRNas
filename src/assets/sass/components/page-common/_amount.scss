@@ -1,0 +1,27 @@
+.amount {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 943px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+
+    &__item-title {
+        padding-bottom: 12px;
+    }
+    @include tablet {
+        justify-content: space-evenly;
+    }
+    @include tablet-sm {
+        flex-direction: column;
+        align-items: center;
+        gap: 36px
+    }
+
+    &__item-value {
+        @include tablet-sm {
+            text-align: center;
+        }
+    }
+}

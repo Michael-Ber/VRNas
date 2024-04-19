@@ -9,16 +9,17 @@
 @import './components/page-common/footer';
 @import './components/page-common/subscribe';
 @import './components/page-common/pagename';
+@import './components/page-common/service';
+@import './components/page-common/amount';
+@import './components/page-common/price';
+@import './components/page-common/testimonial';
 
 // HOMEPAGE
 
 @import './components/page-home/hero';
 @import './components/page-home/about';
-@import './components/page-home/service';
 @import './components/page-home/choose';
 @import './components/page-home/dreams';
-@import './components/page-home/testimonial';
-@import './components/page-home/price';
 @import './components/page-home/companies';
 @import './components/page-home/articles';
 
@@ -28,3 +29,5 @@
 @import './components/page-about/needs';
 @import './components/page-about/team';
 @import './components/page-about/faq';
+
+// SERVICE PAGE

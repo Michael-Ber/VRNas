@@ -1,13 +1,22 @@
 .price {
     position: relative;
     padding-bottom: 100px;
-    &__bg {
-        position: absolute;
-        filter: blur(60px);
-        top: 70%;
-        left: 55%;
-        transform: translate(-50%, -50%);
-        
+    background-image: url('../assets/img/img-light.svg');
+    background-position: top left -22%;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    @include tablet-sm {
+        background-position: top 10% left;
+        background-size: 80%;
+    }
+    &__picture {
+        padding-left: 10px;
+        align-self: flex-end;
+        @include tablet {
+            padding-top: 37px;
+            padding-left: 0;
+            align-self: center;
+        }
     }
     &__title {
         padding-bottom: 12px;
@@ -28,10 +37,13 @@
 
     &__content {
         position: relative;
-        padding: 55px 42px;
+        display: flex;
+        justify-content: space-between;
+        padding: 55px 0 55px 42px;
         background: rgba($greyscale-black-80, .81);
         border: 1px solid rgba($greyscale-white, .3);
         @include tablet {
+            flex-direction: column;
             padding: 32px 22px;
         }
     }
@@ -39,7 +51,7 @@
     &__content-wrapper {
         display: flex;
         gap: 120px;
-        max-width: 760px;
+        max-width: 65%;
         &::after {
             content: '';
             display: block;
@@ -50,7 +62,6 @@
             @include tablet {
                 width: 100%;
                 height: 1px;
-                margin-bottom: 200px;
             }
         }
         @include tablet {
@@ -85,9 +96,9 @@
         border-image: $gradient;
         border-image-slice: 1;
         @include desktop-md {
-            width: 270px;
-            left: unset;
-            right: 15px;
+            // width: 270px;
+            // left: unset;
+            // right: 15px;
         }
         @include tablet {
            right: unset;

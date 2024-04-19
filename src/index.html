@@ -6,14 +6,15 @@
 <body class="page__body">
     <div class="site-container">
         @@include('partials/page-common/header.html')
-        <main>
+        <main class="main">
+            <img src="../assets/img/waves.svg" alt="background waves" class="main__waves">
             @@include('partials/page-home/hero.html')
             @@include('partials/page-home/about.html')
-            @@include('partials/page-home/service.html')
+            @@include('partials/page-common/service.html')
             @@include('partials/page-home/choose.html')
             @@include('partials/page-home/dreams.html')
-            @@include('partials/page-home/testimonial.html')
-            @@include('partials/page-home/price.html')
+            @@include('partials/page-common/testimonial.html')
+            @@include('partials/page-common/price.html')
             @@include('partials/page-home/companies.html')
             @@include('partials/page-home/articles.html')
             @@include('partials/page-common/subscribe.html')
