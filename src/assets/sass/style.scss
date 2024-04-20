@@ -25,7 +25,7 @@
 @import './components/page-home/companies';
 @import './components/page-home/articles';
 
-//ABOUT PAGE
+// ABOUT PAGE
 @import './components/page-about/about';
 @import './components/page-about/choose';
 @import './components/page-about/team';
@@ -33,5 +33,9 @@
 // DETAIL PAGE
 @import './components/page-detail/design';
 
-//PRICING PAGE
+// PRICING PAGE
 @import './components/page-pricing/price';
+
+// BLOG PAGE
+
+@import './components/page-blog/list';

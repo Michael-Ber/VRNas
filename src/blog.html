@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+@@include('partials/page-common/head.html', {
+    "title": "VRNas | Blog"
+})
+<body class="page__body">
+    <div class="site-container">
+        @@include('partials/page-common/header.html')
+        <main class="main">
+            <img src="../assets/img/waves.svg" alt="background waves" class="main__waves">
+            @@include('partials/page-common/pageName.html', {
+                "title": "Blog"
+            })
+            @@include('partials/page-blog/list.html')
+            <!-- @@include('partials/page-detail/design.html')
+            @@include('partials/page-common/video.html', {
+                "poster": "./assets/img/webp/detail-poster.webp",
+                "title": "OUR VR DESIGN PROJECT",
+                "subtitle": "Revolutionize Your Experience with Our Cutting-Edge VR Design Project",
+                "video-name": "VR Design Projects",
+                "badge": "VR Design"
+            })
+            @@include('partials/page-common/price.html')
+            @@include('partials/page-common/subscribe.html') -->
+        </main>
+        @@include('partials/page-common/footer.html')
+    </div>
+    
+</body>
+</html>
