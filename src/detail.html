@@ -12,13 +12,15 @@
                 "title": "Detail Service"
             })
             @@include('partials/page-detail/design.html')
-            <!-- @@include('partials/page-about/about.html')
-            @@include('partials/page-about/choose.html')
-            @@include('partials/page-about/needs.html')
-            @@include('partials/page-about/team.html')
-            @@include('partials/page-home/companies.html')
-            @@include('partials/page-about/faq.html')
-            @@include('partials/page-common/subscribe.html') -->
+            @@include('partials/page-common/video.html', {
+                "poster": "./assets/img/webp/detail-poster.webp",
+                "title": "OUR VR DESIGN PROJECT",
+                "subtitle": "Revolutionize Your Experience with Our Cutting-Edge VR Design Project",
+                "video-name": "VR Design Projects",
+                "badge": "VR Design"
+            })
+            @@include('partials/page-common/price.html')
+            @@include('partials/page-common/subscribe.html')
         </main>
         @@include('partials/page-common/footer.html')
     </div>

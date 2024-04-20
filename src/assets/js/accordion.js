@@ -1,10 +1,8 @@
 export const accordion = () => {
     try {
         const accordions = document.querySelectorAll('.accordion');
-
         accordions.forEach(accordion => {
             const items = accordion.querySelectorAll('.accordion__item');
-
             items.forEach(item => {
                 const btn = item.querySelector('.accordion__control');
                 processAccordion(item, accordion, 'init');

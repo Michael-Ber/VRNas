@@ -114,3 +114,10 @@
         color: $main-colors-purple;
     }
 }
+
+.accordion-header {
+    &__control {
+        font-size: 16px;
+        font-weight: 300;
+    }
+}

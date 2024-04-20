@@ -12,7 +12,13 @@
             @@include('partials/page-home/about.html')
             @@include('partials/page-common/service.html')
             @@include('partials/page-home/choose.html')
-            @@include('partials/page-home/dreams.html')
+            @@include('partials/page-common/video.html', {
+                "poster": "./assets/img/webp/dreams-video.webp",
+                "title": "how to get started",
+                "subtitle": "Bringing Your Virtual Reality Dreams to Life",
+                "video-name": "How to get started",
+                "badge": "VR Service"
+            })
             @@include('partials/page-common/testimonial.html')
             @@include('partials/page-common/price.html')
             @@include('partials/page-home/companies.html')

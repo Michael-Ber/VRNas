@@ -83,6 +83,9 @@
     }
 
     &:hover {
+        border: 1px solid;
+        border-image-slice: 1;
+        border-image-source: $gradient;
         .service__more {
             opacity: 1;
             visibility: visible;

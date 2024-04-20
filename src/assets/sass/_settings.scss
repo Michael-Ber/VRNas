@@ -272,7 +272,20 @@ a {
         visibility: hidden;
         max-height: 0;
         overflow: hidden;
-        transition: .3s max-height ease-in-out, .2s visibility ease-in-out;
+        transition: .2s max-height ease-in-out, .2s visibility ease-in-out;
+    }
+
+    &__control {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        font-weight: 500;
+        font-size: 20px;
+        color: $greyscale-white;
+        @include mobile {
+            font-size: 16px;
+        }
     }
 }
 

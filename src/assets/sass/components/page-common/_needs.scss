@@ -136,13 +136,6 @@
     }
 
     &__control {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        font-weight: 500;
-        font-size: 20px;
-        color: $greyscale-white;
         height: 38px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.35);
         text-align: left;
