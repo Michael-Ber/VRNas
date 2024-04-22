@@ -5,26 +5,31 @@ import { Pagination } from 'swiper/modules';
 
 export const swipers = () => {
     try {
-        const swipers = document.querySelectorAll('.swiper');
-        swipers.forEach(swiper => {
-            const articlesCarousel = new Swiper(swiper, {
-                loop: true,
-                grabCursor: true,
-                modules: [Pagination],
-                slidesPerView: 1,
-                pagination: {
-                    el: '.swiper-pagination',
-                    type: 'bullets',
-                    clickable: true
-                },
-            })
+        const articlesCarousel = new Swiper('.content-articles-swiper', {
+            loop: true,
+            grabCursor: true,
+            modules: [Pagination],
+            slidesPerView: 1,
+            pagination: {
+                el: '.content-articles-swiper__pagination',
+                type: 'bullets',
+                clickable: true
+            },
         })
-        // const articlesCarousel = new Swiper('.swiper', {
-        //     loop: true,
-        //     grabCursor: true,
-        //     modules: [Pagination],
-        //     slidesPerView: 1
-        // })
+        const blogCarousel = new Swiper('.blog-list__swiper', {
+            loop: true,
+            grabCursor: true,
+            modules: [Pagination],
+            slidesPerView: 1,
+            pagination: {
+                el: '.blog-list__swiper-pagination',
+                type: 'bullets',
+                clickable: true,
+                renderBullet: function(index, className) {
+                    return '<span class="' + className + '">' + (index + 1) + '</span>';
+                }
+            },
+        })
     } catch (error) {
         console.log(error)
     }

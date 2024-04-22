@@ -1,0 +1,42 @@
+.team {
+
+    &__container {
+        padding: 0 25px;
+    }
+
+    &__title {
+        grid-column: span 12;
+        padding-bottom: 12px;
+        text-align: center;
+        @include tablet-sm {
+            grid-column: span 4;
+        }
+    }
+
+    &__subtitle {
+        grid-column: span 12;
+        padding-bottom: 48px;
+        text-align: center;
+        @include tablet-sm {
+            grid-column: span 4;
+        }
+    }
+
+    &__wrapper {
+        grid-column: span 12;
+        gap: 32px;
+        @include tablet-sm {
+            grid-column: span 4;
+        }
+    }
+
+    &__card {
+        grid-column: span 4;
+        @include tablet-sm {
+            grid-column: span 2;
+        }
+        @include mobile {
+            grid-column: span 4;
+        }
+    }
+}

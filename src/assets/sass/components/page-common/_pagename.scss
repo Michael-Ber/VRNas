@@ -44,18 +44,24 @@
         color: $greyscale-white;
     }
 
-    &__list {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-    }
-
     &__item {
         &:not(:last-child) {
             .page-name__link {
                 margin-right: 10px;
             }
+        }
+    }
+}
+
+.page-name-list {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    &__item {
+        display: flex;
+        gap: 10px;
+        &:not(:last-child) {
             &::after {
                 content: url('../assets/img/arrow-right-sm.svg');
                 cursor:auto
@@ -66,10 +72,8 @@
         }
         cursor: pointer;
     }
-
     &__link {
         color: inherit;
         cursor: pointer;
-        
     }
 }

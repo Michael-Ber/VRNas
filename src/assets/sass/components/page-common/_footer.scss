@@ -74,7 +74,7 @@
         &:hover {
             .footer__socials-svg {
                 use {
-                    fill: $main-colors-blue;
+                    fill: $main-colors-purple;
                 }
             }
         }
@@ -124,12 +124,6 @@
         font-style: normal;
     }
 
-    &__mail {
-    }
-
-    &__phone {
-    }
-
     &__copyright {
         text-align: center;
         padding-top: 32px;
@@ -146,8 +140,7 @@
     @include tablet {
         gap: 80px;
     }
-    &__list {
-    }
+  
 
     &__item {
 
@@ -196,6 +189,6 @@
 .footer-link {
     transition: .3s color ease;
     &:hover {
-        color: $main-colors-blue;
+        color: $main-colors-purple;
     }
 }
