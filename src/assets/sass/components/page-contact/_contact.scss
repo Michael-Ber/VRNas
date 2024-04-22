@@ -1,0 +1,201 @@
+.page-contacts {
+    padding-bottom: 50px;
+    &__container {
+        padding: 0 120px 0 34px;
+        display: flex;
+        justify-content: space-between;
+        @include desktop-lg {
+            padding: 0 25px;
+        }
+        @include desktop-md {
+            flex-direction: column;
+            align-items: center;
+            gap: 100px;
+        }
+    }
+
+    &__left {
+        position: relative;
+        width: 686px;
+        height: 686px;
+        flex-shrink: 0;
+        margin-right: -60px;
+        order: 1;
+        @include desktop-md {
+            order: 2;
+            margin-right: 0;
+        }
+        @include mobile {
+            width: 472px;
+            height: 472px;
+        }
+    }
+
+    &__right {
+        max-width: 645px;
+        order: 2;
+        @include desktop-md {
+            order: 1;
+        }
+    }
+
+    &__circles {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &__center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 452px;
+        height: 452px;
+        border-radius: 100%;
+        @include mobile {
+            width: 330px;
+            height: 310px;
+        }
+    }
+
+    &__picture {
+        position: absolute;
+        bottom: 0;
+        left: 56%;
+        transform: translateX(-50%);
+        width: 511px;
+        height: 549px;
+        @include mobile {
+            width: 351px;
+            height: 378px;
+        }
+    }
+
+    &__icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%)
+    }
+
+    &__icon {
+        @include circleGradient;
+        position: absolute;
+        width: 46px;
+        height: 46px;
+        &:hover {
+            .page-contacts__svg {
+                use {
+                    fill: $main-colors-purple;
+                }
+            }
+        }
+        &_twitter {
+            transform: rotate(220deg) translate(343px, 0) rotate(-220deg);
+            @include mobile {
+                transform: rotate(290deg) translate(236px, 0) rotate(-290deg);
+            }
+        }
+        &_facebook {
+            transform: rotate(160deg) translate(343px, 0) rotate(-160deg);
+            @include tablet-sm {
+                transform: rotate(290deg) translate(343px, 0) rotate(-290deg);
+            }
+            @include mobile {
+                transform: rotate(220deg) translate(236px, 0) rotate(-220deg);
+            }
+        }
+        &_instagram {
+            transform: rotate(100deg) translate(343px, 0) rotate(-100deg);
+            @include mobile {
+                transform: rotate(100deg) translate(236px, 0) rotate(-100deg);
+            }
+        }
+        &_github {
+            transform: rotate(45deg) translate(282px, 0) rotate(-45deg);
+            @include mobile {
+                transform: rotate(45deg) translate(194px, 0) rotate(-45deg);
+            }
+        }
+    }
+
+    &__svg {
+        width: 22px;
+        height: 22px;
+        use {
+            transition: .3s fill ease;
+            fill: $greyscale-white;
+        }
+    }
+
+    
+
+    &__title {
+        padding-bottom: 12px;
+        @include desktop-md {
+            text-align: center;
+        }
+    }
+
+    &__subtitle {
+        padding-bottom: 15px;
+        @include desktop-md {
+            text-align: center;
+        }
+    }
+
+    &__descr {
+        margin: 0;
+        font-weight: 300;
+        line-height: 175%;
+        color: $greyscale-grey-2;
+        padding-bottom: 32px;
+    }
+
+    &__form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__field {
+        background: rgba($greyscale-black-80, 0.6);
+        border: 1px solid rgba($greyscale-grey-3, 0.5);
+        padding: 11px 15px;
+        min-height: 50px;
+        border-radius: 4px;
+        color: $greyscale-white;
+        &::placeholder {
+            font-weight: 300;
+            line-height: 175%;
+            color: $greyscale-grey-2;
+        }
+    }
+
+    &__textarea {
+        grid-column: span 2;
+        resize: none;
+        @include mobile {
+            grid-column: span 1;
+        }
+    }
+
+    &__btn {
+        width: 198px;
+        height: 50px;
+        @include desktop-md {
+            grid-column: span 2;
+            justify-self: center;
+        }
+        @include mobile {
+            grid-column: span 1;
+        }
+    }
+}

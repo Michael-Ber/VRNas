@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+@@include('partials/page-common/head.html', {
+    "title": "VRNas | Contact Us"
+})
+<body class="page__body">
+    <div class="site-container">
+        @@include('partials/page-common/header.html')
+        <main class="main">
+            <img src="../assets/img/waves.svg" alt="background waves" class="main__waves">
+            @@include('partials/page-common/pageName.html', {
+                "title": "Contact Us"
+            })
+            @@include('partials/page-contacts/address.html')
+            @@include('partials/page-contacts/contact.html')
+            @@include('partials/page-contacts/map.html')
+            @@include('partials/page-common/subscribe.html')
+        </main>
+        @@include('partials/page-common/footer.html')
+    </div>
+    
+</body>
+</html>

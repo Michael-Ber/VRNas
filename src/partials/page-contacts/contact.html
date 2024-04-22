@@ -1,0 +1,49 @@
+<section class="section-offset page-contacts">
+    <div class="page-contacts__container">
+        <div class="page-contacts__left">
+            <img loading="lazy" src="./assets/img/contacts-circles.svg" class="page-contacts__circles" width="686" height="686" alt="Circles for social icons">
+            <div class="page-contacts__center">
+                <picture class="page-contacts__picture">
+                    <source srcset="./assets/img/webp/contacts-man.webp" media="(min-width: 576px)" type="image/webp">
+                    <source srcset="./assets/img/webp/contacts-man-mobile.webp" media="(max-width: 575px)" type="image/webp">
+                    <img loading="lazy" src="./assets/img/webp/contacts-man.webp" srcset="./assets/img/webp/contacts-man_2x.webp 2x" class="page-contacts__img" width="511" height="549" alt="Get in Touch">
+                </picture>
+                <div class="page-contacts__icons">
+                    <a href="#" class="page-contacts__icon page-contacts__icon_twitter">
+                        <svg class="page-contacts__svg">
+                          <use xlink:href="assets/svg/sprite.svg#twitter"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="page-contacts__icon page-contacts__icon_facebook">
+                        <svg class="page-contacts__svg">
+                          <use xlink:href="assets/svg/sprite.svg#facebook"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="page-contacts__icon page-contacts__icon_instagram">
+                        <svg class="page-contacts__svg">
+                          <use xlink:href="assets/svg/sprite.svg#instagram"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="page-contacts__icon page-contacts__icon_github">
+                        <svg class="page-contacts__svg">
+                          <use xlink:href="assets/svg/sprite.svg#github"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="page-contacts__right">
+            <h2 class="section-title page-contacts__title">contact us</h2>
+            <h3 class="section-subtitle page-contacts__subtitle">Get in Touch</h3>
+            <p class="page-contacts__descr">At VRNas, we're always happy to hear from our clients and potential clients. Whether you have a question about our VR services, want to discuss a potential project, or just want to say hello, we're here to help.</p>
+            <form action="#" class="page-contacts__form">
+                <input type="text" required name="first" placeholder="First Name" class="page-contacts__input page-contacts__field">
+                <input type="text" required name="last" placeholder="Last Name" class="page-contacts__input page-contacts__field">
+                <input type="email" required name="email" placeholder="Email" class="page-contacts__input page-contacts__field">
+                <input type="tel" required name="phone" placeholder="Phone Number" class="page-contacts__input page-contacts__field">
+                <textarea name="message" placeholder="Message" cols="30" rows="10" class="page-contacts__textarea page-contacts__field"></textarea>
+                <button class="btn-reset btn btn_primary page-contacts__btn">send message</button>
+            </form>
+        </div>
+    </div>
+</section>

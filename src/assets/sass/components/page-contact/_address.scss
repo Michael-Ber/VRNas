@@ -1,0 +1,72 @@
+.page-contacts-address {
+    padding-top: 64px;
+
+    &__container {
+        row-gap: 32px;
+        padding: 0 25px;
+    }
+    &__item {
+        grid-column: span 4;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        background: rgba($greyscale-black-80, 0.6);
+        padding: 55px 65px;
+        @include desktop-md {
+            padding: 45px 45px;
+        }
+        @include tablet {
+            padding: 35px 25px;
+        }
+        @include tablet-sm {
+            grid-column: span 2;
+        } 
+        @include mobile {
+            grid-column: span 4;
+            padding: 55px 65px;
+        } 
+    }
+}
+.item-contacts {
+    
+    
+    &__icon {
+        @include circleGradient;
+        width: 65px;
+        height: 65px;
+        margin-bottom: 32px;
+        
+    }
+
+    &__name {
+        margin-bottom: 8px;
+    }
+
+    &__address {
+        text-align: center;
+        font-weight: 500;
+        font-size: 20px;
+        color: $greyscale-white;
+        font-style: normal;
+    }
+
+    &__link {
+        text-align: center;
+        font-weight: 500;
+        font-size: 20px;
+        transition: .3s color ease;
+        color: $greyscale-white;
+        &:hover {
+            color: $main-colors-purple;
+        }
+    }
+
+    &__svg {
+        width: 32px;
+        height: 32px;
+        use {
+            fill: currentColor;
+        }
+    }
+}
