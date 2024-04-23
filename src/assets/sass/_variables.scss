@@ -24,6 +24,7 @@ $alerts-error: #ff4747;
 $alerts-warning: #facc15;
 
 $gradient: linear-gradient(90deg, #0cbaf1 0%, #e95ce9 100%);
+$gradient-op50: linear-gradient(90deg, rgba(#0cbaf1, .5) 0%, rgba(#e95ce9, .5) 100%);
 $gradient-text: linear-gradient(90deg, #0cbaf1 0%, #e95ce9 15%);
 $gradient-light: linear-gradient(90deg, lighten(#0cbaf1, 10%) 0%, lighten(#e95ce9, 10%) 100%);
 

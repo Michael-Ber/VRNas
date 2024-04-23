@@ -1,0 +1,63 @@
+.page-privacy {
+
+    position: relative;
+
+    &__picture {
+        @include tablet {
+           width: 160px;
+           height: 360px;
+        }
+        &_left {
+            .page-privacy__picture-img {
+                @include tablet {
+                    left: -40px;
+                }
+            }
+            
+        }
+
+        &_right {
+            .page-privacy__picture-img {
+                @include tablet {
+                    right: -40px;
+                }
+            }
+        }
+    }
+
+    &__picture-img {
+        @include tablet {
+            width: 75%; 
+            height: 48%;
+            
+        }
+    }
+
+    &__images {
+        @include tablet {
+            top: 120px;
+        }
+        @include mobile {
+            top: 80px;
+        }
+    }
+
+
+    &__title {
+        text-align: center;
+        padding-bottom: 12px;
+    }
+
+    &__subtitle {
+        text-align: center;
+        padding-bottom: 24px;
+    }
+
+    &__descr {
+        text-align: center;
+        max-width: 80%;
+        margin: 0 auto;
+        padding-bottom: 48px;
+    }
+
+}

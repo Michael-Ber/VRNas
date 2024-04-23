@@ -4,6 +4,7 @@ import { accordion } from "./accordion.js";
 import { swipers } from "./swipers.js";
 import { headerBGAfterScrolling } from "./header-scrolling.js";
 import { circleMovement } from "./circleMovement.js";
+import { tabs } from "./tab.js";
 
 window.addEventListener('DOMContentLoaded', () => {
     burger();
@@ -12,4 +13,5 @@ window.addEventListener('DOMContentLoaded', () => {
     swipers();
     headerBGAfterScrolling();
     circleMovement();
+    tabs();
 })

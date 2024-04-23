@@ -1,0 +1,100 @@
+.page-terms {
+    position: relative;
+
+    &__picture {
+        @include tablet {
+           width: 160px;
+           height: 360px;
+        }
+        &_left {
+            .page-terms__picture-img {
+                @include tablet {
+                    left: -40px;
+                }
+            }
+            
+        }
+
+        &_right {
+            .page-terms__picture-img {
+                @include tablet {
+                    right: -40px;
+                }
+            }
+        }
+    }
+
+    &__picture-img {
+        @include tablet {
+            width: 75%; 
+            height: 48%;
+            
+        }
+    }
+
+    &__images {
+        @include tablet {
+            top: 120px;
+        }
+        @include mobile {
+            top: 80px;
+        }
+    }
+
+
+    &__title {
+        text-align: center;
+        padding-bottom: 12px;
+    }
+
+    &__subtitle {
+        text-align: center;
+        padding-bottom: 24px;
+    }
+
+    &__descr {
+        text-align: center;
+        max-width: 80%;
+        margin: 0 auto;
+        padding-bottom: 48px;
+    }
+
+}
+
+.page-common {
+    &__container {
+        max-width: 840px;
+        padding: 0 25px;
+        margin: 0 auto;
+
+        font-weight: 300;
+        line-height: 175%;
+        color: $greyscale-grey-2;
+    }
+    &__paragraph-title {
+        font-weight: 500;
+        font-size: 20px;
+        color: $greyscale-white;
+        margin: 0;
+        padding-bottom: 16px;
+    }
+
+    &__paragraph-text {
+        margin: 0;
+        padding-bottom: 32px;
+    }
+
+    &__list {
+        list-style: disc;
+        padding-left: 30px;
+        padding-bottom: 32px;
+    }
+
+    &__list-header {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 175%;
+        color: $greyscale-grey-2;
+        margin: 0;
+    }
+}

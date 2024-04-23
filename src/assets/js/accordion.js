@@ -6,6 +6,9 @@ export const accordion = () => {
             items.forEach(item => {
                 const btn = item.querySelector('.accordion__control');
                 processAccordion(item, accordion, 'init');
+                window.addEventListener('resize', () => {
+                    processAccordion(item, accordion, 'init');
+                })
                 btn.addEventListener('click', () => {
                     processAccordion(item, accordion);
                 })
@@ -14,6 +17,7 @@ export const accordion = () => {
 
         function processAccordion (item, accordion, condition='process'){
             try {
+                
                 const control = item.querySelector('.accordion__control');
                 const content = item.querySelector('.accordion__content');
                 const arrow = item.querySelector('.arrow');
@@ -34,10 +38,14 @@ export const accordion = () => {
                     control.setAttribute('aria-expanded', false);
                     arrow.classList.remove('arrow_active');
                 }
+                
+                
             } catch (error) {
                 console.log(error)
             }
         }
+
+       
         
     } catch (error) {
         console.log(error)
