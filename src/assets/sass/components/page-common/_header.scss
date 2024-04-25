@@ -31,6 +31,9 @@
     &__contact-btn {
         width: 126px;
         height: 52px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         @include mobile {
             display: none;
         }
@@ -62,6 +65,12 @@
             gap: 7px;
             cursor: pointer;
         }
+    }
+
+    &__accordion {
+        display: flex;
+        align-items: center;
+        gap: 64px;
     }
 }
 .logo {
@@ -119,5 +128,8 @@
     &__control {
         font-size: 16px;
         font-weight: 300;
+    }
+    &__item {
+        position: relative;
     }
 }

@@ -1,5 +1,18 @@
 .faq {
-    background: url('../assets/img/img-light.svg') top 30% left 100%/ 80% no-repeat;
+    position: relative;
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 0;
+    }
+
+    &__container {
+        position: relative;
+    }
+
+
     &__title {
         grid-column: 3 / span 8;
         text-align: center;

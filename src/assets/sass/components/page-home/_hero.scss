@@ -8,6 +8,16 @@
         background-position: top 20% left;
         background-size: 180%;
     }
+
+    &__img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-20%, -60%);
+        @include mobile {
+            transform: translate(-20%, -100%);
+        }
+    }
     &__left {
         position: relative;
         grid-column: 1 / span 6;

@@ -5,6 +5,7 @@ import { swipers } from "./swipers.js";
 import { headerBGAfterScrolling } from "./header-scrolling.js";
 import { circleMovement } from "./circleMovement.js";
 import { tabs } from "./tab.js";
+import { modal } from "./modal.js";
 
 window.addEventListener('DOMContentLoaded', () => {
     burger();
@@ -14,4 +15,5 @@ window.addEventListener('DOMContentLoaded', () => {
     headerBGAfterScrolling();
     circleMovement();
     tabs();
+    modal();
 })

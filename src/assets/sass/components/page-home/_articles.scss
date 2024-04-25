@@ -2,8 +2,8 @@
     position: relative;
     z-index: 5;
     &__container {
-        max-width: 1350px;
-        margin: 0 0 0 auto;
+        max-width: 1440px; //1350px
+        margin: 0 auto; //000auto
         padding: 0 0 0 15px;
         @include desktop-md {
             margin: 0 auto;
