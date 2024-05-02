@@ -4,6 +4,8 @@
         padding: 0 120px 0 34px;
         display: flex;
         justify-content: space-between;
+        max-width: 1450px;
+        margin: 0 auto;
         @include desktop-lg {
             padding: 0 25px;
         }
