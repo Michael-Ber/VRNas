@@ -130,16 +130,16 @@
         font-size: 16px;
         line-height: 175%;
         color: $greyscale-white;
-        height: 52px;
+        padding: 11px 18px;
         transition: .3s border-image-source ease;
         &_all {
-            width: 65px;
+            max-width: 65px;
         }
         &_service {
-            width: 125px;
+            max-width: 125px;
         }
         &_pricing {
-            width: 98px;
+            max-width: 98px;
         }
 
         &_active {
